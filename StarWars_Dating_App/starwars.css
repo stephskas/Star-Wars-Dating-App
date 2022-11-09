@@ -1,0 +1,137 @@
+
+body {
+  background-color: #000;
+  color: #decfcf;
+  letter-spacing: .05em;
+}
+h1 {
+  font-size: 3.5rem;
+  font-family: 'Goldman', sans-serif;
+  margin-bottom: 50px;
+  color: #ffbfbf;
+}
+h2 {
+  font-family: 'Goldman', sans-serif;
+  font-weight: 600;
+  font-size: 2.5em;
+  color: #e06d6d;
+  letter-spacing: .05em;
+}
+h3 {
+  font-weight: 500;
+  font-size: 2em;
+  font-family: "Montserrat", sans-serif;
+}
+h4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  color:#decfcf;
+  font-size: 2em;
+  margin: 0 auto;
+  padding: 0;
+}
+p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+}
+img {
+  margin: 0 auto;
+}
+
+.background {
+  background:
+      linear-gradient(rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.8)),
+      url("img/cantina.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  padding: 50px;
+}
+.userData {
+  justify-content: center;
+  font-weight: 400;
+}
+.user h3 {
+  justify-content: left;
+  font-weight: 500;
+}
+.container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 700px;
+  margin: 0 auto;
+  padding: 5px 5px 20px 5px;
+}
+.childContainer {
+  max-width: 90%;
+  position:absolute;
+  top: 10%;
+  background-color: rgba(22, 21, 21, .8);
+  border: 1px solid #1c1b1b;
+  border-radius: 15px;
+  padding: 20px 45px 50px 45px;
+  box-shadow: inset 0px 0px 2px 2px #232323;
+  text-align: left;
+}
+.link {
+  text-decoration: underline;
+  color: #d3415b;
+  cursor: pointer;
+}
+.dataLabel {
+  font-weight: 600;
+}
+.center {
+  text-align: center;
+}
+
+.fullwidth {
+  width: 100%;
+}
+button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #383838;
+  background-color: #e06d6d;
+  margin-top: 35px;
+  padding: 10px 30px;
+  border-radius: 10px;
+  letter-spacing: 0.02em;
+}
+button:hover {
+  color: #383838;
+  background-color: #d3415b
+}
+@media only screen and (max-width: 845px) {
+  .child {
+    padding: 15px 30px 60px 30px !important;
+  }
+}
+.spacerRight {
+  margin-right: 20px;
+}
+.pulsate {
+    -webkit-animation: pulsate 2.5s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    opacity: 0.3;
+}
+@-webkit-keyframes pulsate {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1.0;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
