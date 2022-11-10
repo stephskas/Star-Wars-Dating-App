@@ -31,11 +31,11 @@ There are a limited number of images and characters. This could be expanded. Als
 
 ### App Screenshots:
 
-Home Page:
+Home:
 ![StarWars-Dating-App-Homepage](https://user-images.githubusercontent.com/32989597/200938838-f01a686e-cbc8-4e49-8062-07e6c7d45363.jpg)
 
-Match Page:
+Match:
 ![StarWars-Dating-App-MatchPage](https://user-images.githubusercontent.com/32989597/200938930-0a726a8a-c75e-4554-aa67-2d8058403c7c.jpg)
 
-Character's Home Page:
+Match's Home:
 ![StarWars-Dating-App-CharacterHomePage](https://user-images.githubusercontent.com/32989597/200938948-bff6d034-54f6-4195-82fd-d4267c9109ca.jpg)
