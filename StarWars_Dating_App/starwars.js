@@ -20,7 +20,7 @@ function resetData(selectedData) {
 
 /* Get API data for (films, homeworld) or randomly chosen character */
 async function getData(selectedUrl) {
-  let randomNum = Math.floor(Math.random() * 10) + 1
+  let randomNum = Math.floor(Math.random() * 10)
   let id = characterIds[randomNum]
   try {
     let url = selectedUrl ? selectedUrl : `https://swapi.dev/api/people/${id}`
