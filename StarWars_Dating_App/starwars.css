@@ -10,6 +10,7 @@ body {
   height: 100vh;
   color: #decfcf;
 }
+
 h1 {
   font-size: 8vw;
   font-family: 'Goldman', sans-serif;
@@ -17,6 +18,7 @@ h1 {
   width: 95vw;
   margin: 10vh 0;
 }
+
 h2 {
   font-family: 'Goldman', sans-serif;
   font-weight: 600;
@@ -24,47 +26,56 @@ h2 {
   color: #e06d6d;
   letter-spacing: .05em;
 }
+
 h3 {
   font-weight: 500;
   font-size: 2em;
   font-family: "Montserrat", sans-serif;
 }
+
 h4 {
   font-family: "Montserrat", sans-serif;
   font-weight: 200;
-  color:#decfcf;
+  color: #decfcf;
   font-size: 6vw;
   margin: 0 auto;
-  padding:0 0 20px 0;
+  padding: 0 0 20px 0;
 }
+
 p {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1em;
 }
+
 img {
   margin: 0 auto;
   width: 100%;
   border-radius: 5px;
 }
+
 .userData {
   font-weight: 400;
   font-size: 1.35em;
 }
+
 .user h3 {
   justify-content: left;
   font-weight: 500;
 }
+
 .container {
   width: 95vw;
+  min-width: 300px;
   height: 90vh;
-  margin-top: 30px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   text-align: center;
 }
+
 .childContainer {
   background-color: rgba(22, 21, 21, .8);
   border: 1px solid #1c1b1b;
@@ -73,26 +84,32 @@ img {
   box-shadow: inset 0px 0px 2px 2px #232323;
   text-align: left;
 }
+
 .link {
   text-decoration: underline;
   color: #d3415b;
   cursor: pointer;
 }
+
 .dataLabel {
   font-weight: 600;
 }
+
 .center {
   text-align: center;
 }
+
 .nav {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center; 
+  justify-content: center;
 }
+
 .fullwidth {
   width: 100%;
 }
+
 button {
   font-family: "Montserrat", sans-serif;
   font-size: 1.25em;
@@ -105,46 +122,58 @@ button {
   letter-spacing: 0.02em;
   width: 40vw;
 }
+
 button:hover {
   color: #383838;
   background-color: #d3415b
 }
+
 @media only screen and (max-width: 500px) {
   button {
-	width: 100%;	
+    width: 100%;
   }
-  .container { 
-	  width: 95vw;
+
+  .container {
+    width: 95vw;
   }
+
   h1 {
-	  padding-top: 5vh;
+    padding-top: 5vh;
   }
-  h4 { 
-	  padding-bottom: 1vw;
+
+  h4 {
+    padding-bottom: 1vw;
   }
 }
+
 .pulsate {
-    -webkit-animation: pulsate 2.5s ease-out;
-    -webkit-animation-iteration-count: infinite;
-    opacity: 0.3;
+  -webkit-animation: pulsate 2.5s ease-out;
+  -webkit-animation-iteration-count: infinite;
+  opacity: 0.3;
 }
+
 @-webkit-keyframes pulsate {
   0% {
     opacity: 0.3;
   }
+
   50% {
     opacity: 1.0;
   }
+
   100% {
     opacity: 0.3;
   }
 }
+
 .CTA {
-	font-size: 2em;
+  font-size: 2em;
 }
+
 .spacer-right {
-	margin-right:20px;
+  margin-right: 20px;
 }
+
 .spacer-bottom {
-	margin-bottom:100px;
+  margin-bottom: 100px;
 }
