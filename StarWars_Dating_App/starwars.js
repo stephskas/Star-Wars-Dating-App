@@ -59,7 +59,7 @@ async function renderCharacter(selectedData) {
   characterHtmlSegment = `
         <div class="childContainer">
           <h2 class="center">YOUR MATCH</h2>
-          <img src="img/${id}.jpg" width="300" />
+          <img src="img/${id}.jpg" />
           <h3 class="center">${character.name}</h3>
             <div class="userData">
               <p><span class="dataLabel">Birth year:</span> ${character.birth_year}</p>
@@ -73,7 +73,7 @@ async function renderCharacter(selectedData) {
          </div>
         </div>
         `
-  /* If user doesn't click button to get match, display no text */
+  /* Until user clicks button to get match, display no text */
   if (!selectedData) {
     container.innerHTML = characterHtmlSegment
   }
@@ -94,8 +94,8 @@ async function renderHomeworld(selectedUrl, characterName, homeworldName) {
               <p><span class="dataLabel">Terrain:</span> ${homeworld.terrain}</p>
               <p><span class="dataLabel">Orbital Period:</span> ${homeworld.orbital_period}</p>
               <p><span class="dataLabel">Population:</span> ${population}</p>
-            <div class="center">
-              <button class="spacerRight" onClick="renderCharacter()">New Match</button>
+            <div class="nav fullwidth">
+              <button class="spacer-right" onClick="renderCharacter()">New Match</button>
               <button onClick = "resetData(characterHtmlSegment)">Back</button>
             </div>
          </div>

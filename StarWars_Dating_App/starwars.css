@@ -1,19 +1,26 @@
-
 body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-image: url("img/cantina.jpg");
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: cover;
   background-color: #000;
+  height: 100vh;
   color: #decfcf;
-  letter-spacing: .05em;
 }
 h1 {
-  font-size: 3.5rem;
+  font-size: 8vw;
   font-family: 'Goldman', sans-serif;
-  margin-bottom: 50px;
   color: #ffbfbf;
+  width: 95vw;
+  margin: 10vh 0;
 }
 h2 {
   font-family: 'Goldman', sans-serif;
   font-weight: 600;
-  font-size: 2.5em;
+  font-size: 3em;
   color: #e06d6d;
   letter-spacing: .05em;
 }
@@ -26,9 +33,9 @@ h4 {
   font-family: "Montserrat", sans-serif;
   font-weight: 200;
   color:#decfcf;
-  font-size: 2em;
+  font-size: 6vw;
   margin: 0 auto;
-  padding: 0;
+  padding:0 0 20px 0;
 }
 p {
   font-family: "Montserrat", sans-serif;
@@ -37,46 +44,32 @@ p {
 }
 img {
   margin: 0 auto;
-}
-
-.background {
-  background:
-      linear-gradient(rgba(0, 0, 0, 0.8),
-        rgba(0, 0, 0, 0.8)),
-      url("img/cantina.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 100%;
-  padding: 50px;
+  width: 100%;
+  border-radius: 5px;
 }
 .userData {
-  justify-content: center;
   font-weight: 400;
+  font-size: 1.35em;
 }
 .user h3 {
   justify-content: left;
   font-weight: 500;
 }
 .container {
-  text-align: center;
+  width: 95vw;
+  height: 90vh;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  width: 80%;
-  height: 700px;
-  margin: 0 auto;
-  padding: 5px 5px 20px 5px;
+  text-align: center;
 }
 .childContainer {
-  max-width: 90%;
-  position:absolute;
-  top: 10%;
   background-color: rgba(22, 21, 21, .8);
   border: 1px solid #1c1b1b;
   border-radius: 15px;
-  padding: 20px 45px 50px 45px;
+  padding: 20px 30px 75px 30px;
   box-shadow: inset 0px 0px 2px 2px #232323;
   text-align: left;
 }
@@ -91,32 +84,44 @@ img {
 .center {
   text-align: center;
 }
-
+.nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
+}
 .fullwidth {
   width: 100%;
 }
 button {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.5em;
+  font-size: 1.25em;
   font-weight: 600;
   color: #383838;
   background-color: #e06d6d;
-  margin-top: 35px;
-  padding: 10px 30px;
+  margin-top: 2vw;
+  padding: 20px 30px;
   border-radius: 10px;
   letter-spacing: 0.02em;
+  width: 40vw;
 }
 button:hover {
   color: #383838;
   background-color: #d3415b
 }
-@media only screen and (max-width: 845px) {
-  .child {
-    padding: 15px 30px 60px 30px !important;
+@media only screen and (max-width: 500px) {
+  button {
+	width: 100%;	
   }
-}
-.spacerRight {
-  margin-right: 20px;
+  .container { 
+	  width: 95vw;
+  }
+  h1 {
+	  padding-top: 5vh;
+  }
+  h4 { 
+	  padding-bottom: 1vw;
+  }
 }
 .pulsate {
     -webkit-animation: pulsate 2.5s ease-out;
@@ -134,4 +139,12 @@ button:hover {
     opacity: 0.3;
   }
 }
-
+.CTA {
+	font-size: 2em;
+}
+.spacer-right {
+	margin-right:20px;
+}
+.spacer-bottom {
+	margin-bottom:100px;
+}
