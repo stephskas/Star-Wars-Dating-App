@@ -67,6 +67,7 @@ img {
 .container {
   width: 95vw;
   min-width: 300px;
+  max-width: 1000px;
   height: 90vh;
   margin-top: 40px;
   display: flex;
@@ -77,6 +78,8 @@ img {
 }
 
 .childContainer {
+  max-width: 500px;
+  min-width: 300px;
   background-color: rgba(22, 21, 21, .8);
   border: 1px solid #1c1b1b;
   border-radius: 15px;
