@@ -112,7 +112,6 @@ img {
 }
 
 button {
-  z-index: 100;
   font-family: "Montserrat", sans-serif;
   font-size: 1.5em;
   font-weight: 600;
@@ -131,7 +130,8 @@ button:hover {
 }
 
 .CTA {
-  font-size: 5vw;
+  z-index: 100;
+  font-size: 3vw;
 }
 
 @media only screen and (max-width: 500px) {
@@ -153,6 +153,10 @@ button:hover {
   h4 {
     padding-bottom: 1vw;
     font-size: 8vw;
+  }
+
+  .CTA {
+    font-size: 1.5em;
   }
 }
 

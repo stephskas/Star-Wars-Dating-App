@@ -13,8 +13,6 @@ let characterHtmlSegment = ``
 /* provide (10) API character IDs and onClick of button get random number between 1 and (10) to be used as index to select characterID. (Only 10 character images are available.) */
 const characterIds = [1, 5, 11, 13, 14, 16, 21, 24, 45, 57]
 
-document.getElementById("CTA").addEventListener("click", renderCharacter)
-
 /* sets HTML back to previous segment */
 function resetData(selectedData) {
   container.innerHTML = selectedData
@@ -31,7 +29,6 @@ async function getData(selectedUrl) {
   } catch (error) {
     console.log(error)
   }
-  /*
   try {
     let url = selectedUrl ? selectedUrl : `https://swapi.tech/api/people/${id}`
     let res = await fetch(url)
@@ -39,12 +36,12 @@ async function getData(selectedUrl) {
   } catch (error) {
     console.log(error)
   }
-*/
 }
+
 /* Renders character data if available. Provides link for user to get the selected character's homeworld data. */
 async function renderCharacter(selectedData) {
+  document.getElementsByClassName("CTA").innerHTML = "LOADING"
   const character = await getData()
-
   /* get character id which corresponds with character image name */
   const url = character.url
   const splitId = url.split("/")
@@ -73,7 +70,7 @@ async function renderCharacter(selectedData) {
               <p><span class="dataLabel">Gender:</span> ${character.gender}</p>
               <p onClick="renderFilms('${character.films}', '${character.name}')"><span class="dataLabel">Film Appearances:</span> <br>${films}</p>
               <p onClick="renderHomeworld('${character.homeworld}', '${character.name}', '${homeworld.name}')"><span class="dataLabel">Homeworld:</span> <span class="link">${homeworld.name}</span></p>
-            <button class="fullwidth" onClick = "renderCharacter()">NEXT</button>
+            <button class="CTA fullwidth" onClick="renderCharacter()">NEXT</button>
          </div>
         </div>
         `
@@ -99,7 +96,7 @@ async function renderHomeworld(selectedUrl, characterName, homeworldName) {
               <p><span class="dataLabel">Orbital Period:</span> ${homeworld.orbital_period}</p>
               <p><span class="dataLabel">Population:</span> ${population}</p>
             <div class="nav fullwidth">
-              <button class="spacer-right" onClick="renderCharacter()">NEXT</button>
+              <button class="CTA spacer-right" onClick="renderCharacter()">NEXT</button>
               <button onClick = "resetData(characterHtmlSegment)">BACK</button>
             </div>
          </div>
