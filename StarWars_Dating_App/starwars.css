@@ -12,7 +12,7 @@ body {
 }
 
 h1 {
-  font-size: 8vw;
+  font-size: 7vw;
   font-family: 'Goldman', sans-serif;
   color: #ffbfbf;
   width: 95vw;
@@ -37,7 +37,7 @@ h4 {
   font-family: "Montserrat", sans-serif;
   font-weight: 200;
   color: #decfcf;
-  font-size: 6vw;
+  font-size: 5vw;
   margin: 0 auto;
   padding: 0 0 20px 0;
 }
@@ -66,10 +66,9 @@ img {
 
 .container {
   width: 95vw;
-  min-width: 300px;
-  max-width: 1000px;
   height: 90vh;
-  margin-top: 40px;
+  max-width: 95vw;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -79,7 +78,6 @@ img {
 
 .childContainer {
   max-width: 500px;
-  min-width: 300px;
   background-color: rgba(22, 21, 21, .8);
   border: 1px solid #1c1b1b;
   border-radius: 15px;
@@ -114,16 +112,17 @@ img {
 }
 
 button {
+  z-index: 100;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.25em;
+  font-size: 1.5em;
   font-weight: 600;
   color: #383838;
   background-color: #e06d6d;
   margin-top: 2vw;
-  padding: 20px 30px;
+  padding: 30px 40px;
   border-radius: 10px;
   letter-spacing: 0.02em;
-  width: 40vw;
+  width: 45%;
 }
 
 button:hover {
@@ -131,9 +130,15 @@ button:hover {
   background-color: #d3415b
 }
 
+.CTA {
+  font-size: 5vw;
+}
+
 @media only screen and (max-width: 500px) {
   button {
-    width: 100%;
+    width: 90%;
+    padding: 20px 40px;
+    font-size: 1.5em;
   }
 
   .container {
@@ -142,10 +147,12 @@ button:hover {
 
   h1 {
     padding-top: 5vh;
+    font-size: 8vw;
   }
 
   h4 {
     padding-bottom: 1vw;
+    font-size: 8vw;
   }
 }
 
@@ -167,10 +174,6 @@ button:hover {
   100% {
     opacity: 0.3;
   }
-}
-
-.CTA {
-  font-size: 2em;
 }
 
 .spacer-right {

@@ -12,8 +12,8 @@ let characterHtmlSegment = ``
 
 /* provide (10) API character IDs and onClick of button get random number between 1 and (10) to be used as index to select characterID. (Only 10 character images are available.) */
 const characterIds = [1, 5, 11, 13, 14, 16, 21, 24, 45, 57]
-let randomNum = Math.floor(Math.random() * 10)
-let id = characterIds[randomNum]
+
+document.getElementById("CTA").addEventListener("click", renderCharacter)
 
 /* sets HTML back to previous segment */
 function resetData(selectedData) {
@@ -22,20 +22,24 @@ function resetData(selectedData) {
 
 /* Get API data for (films, homeworld) or randomly chosen character */
 async function getData(selectedUrl) {
+  let randomNum = Math.floor(Math.random() * 10)
+  let id = characterIds[randomNum]
   try {
     let url = selectedUrl ? selectedUrl : `https://swapi.dev/api/people/${id}`
+    let res = await fetch(url).then((resp) => resp.json())
+    return res
+  } catch (error) {
+    console.log(error)
+  }
+  /*
+  try {
+    let url = selectedUrl ? selectedUrl : `https://swapi.tech/api/people/${id}`
     let res = await fetch(url)
     return res.json()
   } catch (error) {
     console.log(error)
   }
-  // try {
-  //   let url = selectedUrl ? selectedUrl : `https://swapi.tech/api/people/${id}`
-  //   let res = await fetch(url)
-  //   return res.json()
-  // } catch (error) {
-  //   console.log(error)
-  // }
+*/
 }
 /* Renders character data if available. Provides link for user to get the selected character's homeworld data. */
 async function renderCharacter(selectedData) {
@@ -95,8 +99,8 @@ async function renderHomeworld(selectedUrl, characterName, homeworldName) {
               <p><span class="dataLabel">Orbital Period:</span> ${homeworld.orbital_period}</p>
               <p><span class="dataLabel">Population:</span> ${population}</p>
             <div class="nav fullwidth">
-              <button class="spacer-right" onClick="renderCharacter()">New Match</button>
-              <button onClick = "resetData(characterHtmlSegment)">Back</button>
+              <button class="spacer-right" onClick="renderCharacter()">NEXT</button>
+              <button onClick = "resetData(characterHtmlSegment)">BACK</button>
             </div>
          </div>
         </div>
